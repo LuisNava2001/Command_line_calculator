@@ -2,16 +2,16 @@
 
 A simple, beginner-friendly command-line calculator written in **C**. This project is ideal for practicing input handling, function creation, loops, and basic arithmetic logic.
 
-## ✨ Features
+## 📌 Notes
 
-- ✅ Addition
-- ✅ Subtraction
-- ✅ Multiplication
-- ✅ Division (with zero check)
-- ✅ Power (exponentiation)
-- ✅ Factorial (non-negative integers only)
-- 🧠 Input validation with helpful prompts
-- 📦 Easy to compile and run on any system with GCC
+- Addition
+- Subtraction
+- Multiplication
+- Division (with zero-check to prevent division by zero)
+- Power (exponentiation)
+- Factorial (supports only non-negative integers)
+- Input validation with helpful prompts for invalid entries
+- Easy to compile and run on any system with GCC
 
 ## 📁 Project Structure
 ```
@@ -25,7 +25,7 @@ command-line-calculator/
 
 ### 🔧 Option 1: Using GCC
 
-Make sure you have `gcc` installed.
+ Make sure you have `gcc` installed.
 
 ```bash
 gcc calculator.c -o calculator -lm
@@ -33,6 +33,36 @@ gcc calculator.c -o calculator -lm
 
 -lm links the math library, required for the pow() function.
 ```
+
+## 🕹️ How to Use
+ Once the program is compiled and running, follow the on-screen menu to perform calculations.
+
+```
+======== Command-Line Calculator ========
+Choose an operation:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Power
+6. Factorial
+7. Exit
+Enter your choice:
+```
+
+### ✅ Steps
+```
+Enter a number (1–7) to select the desired operation.
+
+Input the required values (e.g., two numbers for addition, one number for factorial).
+
+The result will be printed on the screen.
+
+After the result, you'll be returned to the main menu.
+
+Choose 7 to exit the calculator.
+```
+
 ## 👤 Author
 
 ### Luis Nava | LuisNava2001
