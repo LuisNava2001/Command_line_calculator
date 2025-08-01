@@ -30,7 +30,7 @@ int main(){
 
     while(1){
         // Display the menu
-        printf("#############################################\n");
+        printf("\n#############################################\n");
         printf("#######   Command Line Calculator     #######\n\n");
         printf("1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Power\n6. Factorial\n7. Exit.\n");
         printf("Choose an Operation: ");
@@ -46,42 +46,46 @@ int main(){
         switch(choice) {
             case 1:
                 // Addition
-                printf("Enter two numbers (Example= 21 49): ");
+                printf("Enter two numbers: ");
                 if (scanf("%lf %lf", &num1, &num2) != 2) {
                     printf("Invalid input! Please enter two number.\n");
                     while (getchar() != '\n');
                     break;
                 }
+                printf("\n%lf + %lf = ", num1, num2);
                 printf("-----> Result: %.2lf\n", add(num1, num2));
                 break;
             case 2:
                 // Subtract
-                printf("Enter two numbers (Example= 21 49): ");
+                printf("Enter two numbers: ");
                 if (scanf("%lf %lf", &num1, &num2) != 2) {
                     printf("Invalid input! Please enter two number.\n");
                     while (getchar() != '\n');
                     break;
                 }
+                printf("\n%lf - %lf = ", num1, num2);
                 printf("-----> Result: %.2lf\n", subtract(num1, num2));
                 break;
             case 3:
                 // Multiply
-                printf("Enter two numbers (Example= 21 49): ");
+                printf("Enter two numbers: ");
                 if (scanf("%lf %lf", &num1, &num2) != 2) {
                     printf("Invalid input! Please enter two number.\n");
                     while (getchar() != '\n');
                     break;
                 }
+                printf("\n%lf x %lf = ", num1, num2);
                 printf("-----> Result: %.2lf\n", multiply(num1, num2));
                 break;
             case 4:
                 // Division with zero check
-                printf("Enter two numbers (Example= 21 49): ");
+                printf("Enter two numbers: ");
                 if (scanf("%lf %lf", &num1, &num2) != 2) {
                     printf("Invalid input! Please enter two number.\n");
                     while (getchar() != '\n');
                     break;
                 }
+                printf("\n%lf / %lf = ", num1, num2);
                 if(num2 != 0)
                     printf("-----> Result: %.2lf\n", divide(num1, num2));
                 else
@@ -89,12 +93,13 @@ int main(){
                 break;
             case 5:
                 // Power calculation
-                printf("Enter base and exponent: (Example= 21 49): ");
+                printf("Enter base and exponent: ");
                 if (scanf("%lf %d", &num1, &int_num) != 2) {
                     printf("Invalid input! Please enter a number and an integer.\n");
                     while (getchar() != '\n');
                     break;
                 }
+                printf("\n%lf ^ %ld = ", num1, int_num);
                 printf("-----> Result: %.2lf\n", power(num1, int_num));
                 break;
             case 6:
@@ -106,6 +111,7 @@ int main(){
                     break;
                 }
                 if (int_num >= 0) {
+                    printf("\n%ld! = ", int_num);
                     printf("-----> Result: %llu\n", factorial(int_num));
                 } else {
                     printf("Error!! Negative number for factorial...\n");
